@@ -1,0 +1,28 @@
+{
+  "name": "project",
+  "version": "0.0.1",
+  "dependencies": {
+
+    "jquery": null,
+    "zepto": null,
+    "lodash": null,
+    "backbone": null,
+    "requirejs": null,
+    "text": "requirejs/text",
+    "domready": "requirejs/domReady",
+    "raf": "CatChen/requestAnimationFrame",
+    "modernizr": null,
+    "tweenjs": null,
+    "retina": "imulus/retinajs",
+
+    "jasmine": "pivotal/jasmine",
+    "mocha": null,
+    "chai": null,
+    "chai-jquery": null,
+    
+    "normalize": "necolas/normalize.css",
+    "bootstrap": null,
+
+    "cookie": "carhartl/jquery-cookie"
+  }
+}

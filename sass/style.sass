@@ -1,0 +1,12 @@
+@import 'compass'
+@import 'mixins'
+
+@import 'normalize.sass'
+@import 'jasmine.sass'
+@import 'mocha.sass'
+
+// using sprite sprite-background(low,high,name)
+$icon: sprite-map('sprites/*.png')
+$retina: sprite-map('sprites-retina/*.png')
+$icon-url: sprite-url($icon)
+$retina-url: sprite-url($retina)
