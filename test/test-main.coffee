@@ -42,13 +42,3 @@ require.config
   deps: tests
  
   callback: window.__karma__.start
-
-require [
-  'routers/router'
-  'cookie'
-], (
-  Workspace
-) ->
-  new Workspace()
-  Backbone.history.start
-    pushState: true
