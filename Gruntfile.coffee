@@ -24,9 +24,9 @@ module.exports = (grunt) ->
         ext: '.js'
       jasmine:
         expand: true
-        cwd: 'spec/'
+        cwd: 'jasmine/'
         src: ['*.coffee', '**/*.coffee']
-        dest: 'public/spec'
+        dest: 'public/jasmine'
         ext: '.js'
       mocha:
         expand: true
