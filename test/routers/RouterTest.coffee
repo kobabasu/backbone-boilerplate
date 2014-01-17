@@ -5,6 +5,7 @@ define [
 ) ->
   describe 'routers/router', () ->
 
-    describe 'title', () ->
-      it 'title should have project', ->
-        $('title').should.have.text 'project'
+    describe 'events', () ->
+      it 'routers/router should have index property', ->
+       router = new Router()
+       router.should.have.property('index')

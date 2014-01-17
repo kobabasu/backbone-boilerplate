@@ -5,6 +5,7 @@ define [
 ) ->
   describe 'views/admin', () ->
 
-    describe 'title', () ->
-      it 'title should have project', ->
-        $('title').should.have.text 'project'
+    describe 'events', () ->
+      it 'views/admin should have events property', ->
+       admin = new Admin()
+       admin.should.have.property('events')

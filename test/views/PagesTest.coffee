@@ -5,6 +5,7 @@ define [
 ) ->
   describe 'views/pages', () ->
 
-    describe 'title', () ->
-      it 'title should have project', ->
-        $('title').should.have.text 'project'
+    describe 'events', () ->
+      it 'views/pages should have events property', ->
+       pages = new Pages()
+       pages.should.have.property('events')

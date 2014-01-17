@@ -16,5 +16,13 @@
     "grunt-csso": "~0.5.0",
     "grunt-styleguide": "~0.2.14",
     "grunt-contrib-imagemin": "~0.4.1"
+
+    "mocha": "~1.17.0",
+    "chai": "~1.8.1",
+    "karma": "~0.10.9",
+    "karma-coverage": "~0.1.4",
+    "karma-mocha": "~0.1.1",
+    "karma-chai": "~0.0.1",
+    "karma-chai-jquery": "~0.1.0"
   }
 }

@@ -5,6 +5,7 @@ define [
 ) ->
   describe 'views/pages/index', () ->
 
-    describe 'title', () ->
-      it 'title should have project', ->
-        $('title').should.have.text 'project'
+    describe 'events', () ->
+      it 'views/pages/index should have events property', ->
+       index = new Index()
+       index.should.have.property('events')
