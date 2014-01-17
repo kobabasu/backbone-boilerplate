@@ -26,7 +26,7 @@ module.exports = (grunt) ->
         expand: true
         cwd: 'jasmine/'
         src: ['*.coffee', '**/*.coffee']
-        dest: 'public/jasmine'
+        dest: 'public/spec'
         ext: '.js'
       mocha:
         expand: true
@@ -114,7 +114,7 @@ module.exports = (grunt) ->
       options:
         dirs: [
           'coffee/**/'
-          'spec/**/'
+          'jasmine/**/'
           'test/**/'
           'sass/**/'
         ]
