@@ -1,10 +1,10 @@
 specs = [
-  '../../jasmine/routers/RouterSpec'
-  '../../jasmine/views/AppSpec'
-  '../../jasmine/views/AdminSpec'
-  '../../jasmine/views/PagesSpec'
-  '../../jasmine/views/admin/IndexSpec'
-  '../../jasmine/views/pages/IndexSpec'
+  '../../spec/routers/RouterSpec'
+  '../../spec/views/AppSpec'
+  '../../spec/views/AdminSpec'
+  '../../spec/views/PagesSpec'
+  '../../spec/views/admin/IndexSpec'
+  '../../spec/views/pages/IndexSpec'
 ]
 
 define [

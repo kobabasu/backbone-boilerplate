@@ -1,5 +1,4 @@
 specs = [
-  '../../test/routers/RouterTest'
   '../../test/views/AppTest'
   '../../test/views/AdminTest'
   '../../test/views/PagesTest'

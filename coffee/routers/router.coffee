@@ -3,7 +3,7 @@ define [
   'views/app'
   'views/pages/index'
   'views/admin/index'
-  '../../jasmine/SpecRunner'
+  '../../spec/SpecRunner'
   '../../test/TestRunner'
 ], (
   Backbone
