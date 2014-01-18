@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'capybara'
-gem 'launchy'
-gem 'turnip'
+# delete these lines. already installed in global
+# gem 'capybara'
+# gem 'launchy'
+# gem 'turnip'
 # gem 'poltergeist'
-gem 'capybara-webkit'
+# gem 'capybara-webkit'
