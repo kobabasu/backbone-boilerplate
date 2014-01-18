@@ -2,5 +2,6 @@ source 'https://rubygems.org'
 
 gem 'capybara'
 gem 'launchy'
-gem 'poltergeist'
 gem 'turnip'
+# gem 'poltergeist'
+gem 'capybara-webkit'

@@ -1,7 +1,7 @@
-Feature: Attacking a monster
-  Background:
-    Given there is a monster
+# encoding: utf-8
 
-  Scenario: attack the monster
-    When I attack it
-    Then it should die
+Feature: 表示画面を確認
+  Scenario: トップページにアクセスし内容を確認
+    Given サイトにアクセスする
+    When トップページを表示する
+    Then 画面にprojectと表示されていること
