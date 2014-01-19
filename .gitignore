@@ -6,6 +6,7 @@ vendor
 node_modules
 public/vendor/*
 public/js
+<<<<<<< HEAD
 !public/js/empty
 public/css
 !public/css/empty
