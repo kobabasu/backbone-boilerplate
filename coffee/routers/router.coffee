@@ -1,6 +1,7 @@
 define [
   'backbone'
   'views/app'
+  'views/menu'
   'views/pages/index'
   'views/admin/index'
   '../../spec/SpecRunner'
@@ -8,6 +9,7 @@ define [
 ], (
   Backbone
   App
+  Menu
   PagesIndex
   AdminIndex
   SpecRunner
@@ -23,6 +25,7 @@ define [
    * @return {Class} Workspace
    * @uses Backbone.Router
    * @uses views/app
+   * @uses views/menu
    * @uses views/pages/index
    * @uses views/admin/index
   ###
