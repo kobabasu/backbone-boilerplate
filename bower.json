@@ -14,6 +14,7 @@
     "modernizr": null,
     "tweenjs": null,
     "retina": "imulus/retinajs",
+    "momentjs": null,
 
     "jasmine": "pivotal/jasmine",
     "mocha": null,
