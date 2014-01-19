@@ -33,20 +33,18 @@ define [
 
     initialize: ->
       @app       = new App()
+      @menu      = new Menu()
 
     routes:
       events =
-        '':           'index'
-        'admin':      'admin'
-        'jasmine':    'jasmine'
-        'mocha':      'mocha'
 
     index: ->
       @app.loaded.index = new PagesIndex()
       @app.loaded.index.render()
 
     admin: ->
-      @app.loaded.admin = new AdminIndex()
+      @app.loaded.index = new AdminIndex()
+      @app.loaded.index.render()
 
     jasmine: ->
       $('body').empty()
