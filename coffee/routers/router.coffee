@@ -37,6 +37,10 @@ define [
 
     routes:
       events =
+        '':            'index'
+        'admin/':      'admin'
+        'jasmine/':    'jasmine'
+        'mocha/':      'mocha'
 
     index: ->
       @app.loaded.index = new PagesIndex()
