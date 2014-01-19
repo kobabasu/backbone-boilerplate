@@ -39,7 +39,6 @@ define [
         'mocha':      'mocha'
 
     index: ->
-      console.log 'index'
       @app.loaded.index = new PagesIndex()
       @app.loaded.index.render()
 
