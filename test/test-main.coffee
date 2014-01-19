@@ -25,6 +25,7 @@ require.config
     modernizr:      '../vendor/modernizr/modernizr-min'
     raf:            '../vendor/raf/requestAnimationFrame'
     tween:          '../vendor/tweenjs/build/tween.min'
+    moment:         '../vendor/momentjs/moment'
     templates:      '../templates'
     cookie:         '../vendor/cookie/jquery.cookie'
 
