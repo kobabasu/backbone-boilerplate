@@ -141,6 +141,7 @@ module.exports = (grunt) ->
       
   grunt.registerTask 'default', [
     'compass:dev'
+    'coffee'
     'styleguide'
   ]
 
