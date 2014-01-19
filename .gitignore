@@ -5,3 +5,13 @@ Gemfile.lock
 vendor
 node_modules
 public/vendor/*
+public/js
+!public/js/empty
+public/css
+!public/css/empty
+public/docs
+!public/docs/empty
+public/test
+!public/test/empty
+public/spec
+!public/spec/empty
