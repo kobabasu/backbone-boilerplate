@@ -1,10 +1,6 @@
 #!/bin/sh
 
-<<<<<<< HEAD
-each install command
-=======
 # each install command
->>>>>>> 0dc5dfa... add changing path script to setup.sh
 npm install
 bundle install --path vendor/bundle
 bower install
