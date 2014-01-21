@@ -24,12 +24,22 @@ define [
     ###*
      * 生成するタグ
      *
+     * @property tagName
+     * @public
+     * @type {String}
+     * @default nav
+    ###
+    tagName: 'nav'
+
+    ###*
+     * 生成するタグ
+     *
      * @property el
      * @public
      * @type {String}
      * @default #menu
     ###
-    el: '#menu'
+    id: '#menu'
 
     ###*
      * menuを設定
@@ -74,6 +84,6 @@ define [
     ###
     render: ->
       tmpl = _.template Tmpl, list['menu']
-      $('nav',@el).html tmpl
+      $('h1').after $(@el).html(tmpl)
 
   return Menu
