@@ -3,37 +3,37 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/projects/sass/coffee/views
+cd ~/pathname/coffee/views
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 ~/projects/sass/public/index.html
-badd +1 ~/projects/sass/coffee/routers/router.coffee
+badd +1 ~/pathname/public/index.html
+badd +1 ~/pathname/coffee/routers/router.coffee
 badd +1 pages/index.coffee
-badd +1 ~/projects/sass/public/templates/pages/index.html
+badd +1 ~/pathname/public/templates/pages/index.html
 badd +1 pages.coffee
-badd +1 ~/projects/sass/sass/base.sass
-badd +1 ~/projects/sass/sass/layout.sass
-badd +1 ~/projects/sass/sass/style.sass
-badd +1 ~/projects/sass/sass/theme.sass
-badd +1 ~/projects/sass/sass/functions.sass
-badd +1 ~/projects/sass/sass/mixins.sass
-badd +1 ~/projects/sass/sass/module.sass
-badd +1 ~/projects/sass/sass/state.sass
-badd +1 ~/projects/sass/sass/motion.sass
-badd +1 ~/projects/sass/test/views/AppTest.coffee
-badd +11 ~/projects/sass/test/views/pages/IndexTest.coffee
-badd +1 ~/projects/sass/test/views/PagesTest.coffee
-badd +1 ~/projects/sass/spec/spec_helper.rb
-badd +1 ~/projects/sass/spec/steps/monster_steps.rb
-badd +1 ~/projects/sass/spec/features/monster.feature
-badd +0 ~/projects/sass/coffee/\[quickrun\ output]
+badd +1 ~/pathname/sass/base.sass
+badd +1 ~/pathname/sass/layout.sass
+badd +1 ~/pathname/sass/style.sass
+badd +1 ~/pathname/sass/theme.sass
+badd +1 ~/pathname/sass/functions.sass
+badd +1 ~/pathname/sass/mixins.sass
+badd +1 ~/pathname/sass/module.sass
+badd +1 ~/pathname/sass/state.sass
+badd +1 ~/pathname/sass/motion.sass
+badd +1 ~/pathname/test/views/AppTest.coffee
+badd +11 ~/pathname/test/views/pages/IndexTest.coffee
+badd +1 ~/pathname/test/views/PagesTest.coffee
+badd +1 ~/pathname/spec/spec_helper.rb
+badd +1 ~/pathname/spec/steps/monster_steps.rb
+badd +1 ~/pathname/spec/features/monster.feature
+badd +0 ~/pathname/coffee/\[quickrun\ output]
 badd +0 ~/dotfiles/doc/log_coffee.txt
 badd +0 ~/dotfiles/doc/log_sass.txt
 badd +0 ~/dotfiles/doc/log_test.txt
 silent! argdel *
-edit ~/projects/sass/coffee
+edit ~/pathname/coffee
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -98,7 +98,7 @@ exe s:l
 normal! zt
 15
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
 enew
@@ -110,10 +110,10 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit ~/projects/sass/coffee/views/pages/index.coffee
+edit ~/pathname/coffee/views/pages/index.coffee
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -128,10 +128,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee/views
+lcd ~/pathname/coffee/views
 wincmd w
 argglobal
-edit ~/projects/sass/coffee/\[quickrun\ output]
+edit ~/pathname/coffee/\[quickrun\ output]
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -146,10 +146,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee/views
+lcd ~/pathname/coffee/views
 wincmd w
 argglobal
-edit ~/projects/sass/coffee/views/pages.coffee
+edit ~/pathname/coffee/views/pages.coffee
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -164,10 +164,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee/views
+lcd ~/pathname/coffee/views
 wincmd w
 argglobal
-edit ~/projects/sass/coffee/routers/router.coffee
+edit ~/pathname/coffee/routers/router.coffee
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -182,10 +182,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee/views
+lcd ~/pathname/coffee/views
 wincmd w
 argglobal
-edit ~/projects/sass/public/templates/pages/index.html
+edit ~/pathname/public/templates/pages/index.html
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -200,10 +200,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee/views
+lcd ~/pathname/coffee/views
 wincmd w
 argglobal
-edit ~/projects/sass/public/index.html
+edit ~/pathname/public/index.html
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -218,7 +218,7 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee/views
+lcd ~/pathname/coffee/views
 wincmd w
 argglobal
 edit ~/dotfiles/doc/log_coffee.txt
@@ -236,7 +236,7 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee/views
+lcd ~/pathname/coffee/views
 wincmd w
 exe '1resize ' . ((&lines * 50 + 32) / 64)
 exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
@@ -254,7 +254,7 @@ exe 'vert 7resize ' . ((&columns * 78 + 136) / 272)
 exe '8resize ' . ((&lines * 48 + 32) / 64)
 exe 'vert 8resize ' . ((&columns * 78 + 136) / 272)
 exe 'vert 9resize ' . ((&columns * 60 + 136) / 272)
-tabedit ~/projects/sass/sass
+tabedit ~/pathname/sass
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -345,10 +345,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
-edit ~/projects/sass/sass/motion.sass
+edit ~/pathname/sass/motion.sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -363,10 +363,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit ~/projects/sass/sass/state.sass
+edit ~/pathname/sass/state.sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -381,10 +381,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit ~/projects/sass/sass/module.sass
+edit ~/pathname/sass/module.sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -399,10 +399,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit ~/projects/sass/sass/layout.sass
+edit ~/pathname/sass/layout.sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -417,7 +417,7 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
 enew
@@ -429,10 +429,10 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit ~/projects/sass/sass/mixins.sass
+edit ~/pathname/sass/mixins.sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -447,10 +447,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit ~/projects/sass/sass/functions.sass
+edit ~/pathname/sass/functions.sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -465,10 +465,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit ~/projects/sass/sass/theme.sass
+edit ~/pathname/sass/theme.sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -483,10 +483,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit ~/projects/sass/sass/style.sass
+edit ~/pathname/sass/style.sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -501,10 +501,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit ~/projects/sass/sass/base.sass
+edit ~/pathname/sass/base.sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -519,10 +519,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit ~/projects/sass/public/templates/pages/index.html
+edit ~/pathname/public/templates/pages/index.html
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -537,10 +537,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit ~/projects/sass/public/index.html
+edit ~/pathname/public/index.html
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -555,7 +555,7 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
 edit ~/dotfiles/doc/log_sass.txt
@@ -573,7 +573,7 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/coffee
+lcd ~/pathname/coffee
 wincmd w
 exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
 exe '2resize ' . ((&lines * 15 + 32) / 64)
@@ -601,7 +601,7 @@ exe 'vert 12resize ' . ((&columns * 52 + 136) / 272)
 exe '13resize ' . ((&lines * 45 + 32) / 64)
 exe 'vert 13resize ' . ((&columns * 52 + 136) / 272)
 exe 'vert 14resize ' . ((&columns * 60 + 136) / 272)
-tabedit ~/projects/sass/test/views
+tabedit ~/pathname/test/views
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -652,10 +652,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/test/views
+lcd ~/pathname/test/views
 wincmd w
 argglobal
-edit ~/projects/sass/test/views/pages/IndexTest.coffee
+edit ~/pathname/test/views/pages/IndexTest.coffee
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -670,10 +670,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
-edit ~/projects/sass/coffee/views/pages/index.coffee
+edit ~/pathname/coffee/views/pages/index.coffee
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -688,7 +688,7 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
 enew
@@ -700,10 +700,10 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-lcd ~/projects/sass/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
-edit ~/projects/sass/test/views/PagesTest.coffee
+edit ~/pathname/test/views/PagesTest.coffee
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -718,10 +718,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
-edit ~/projects/sass/test/views/AppTest.coffee
+edit ~/pathname/test/views/AppTest.coffee
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -736,7 +736,7 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
 edit ~/dotfiles/doc/log_test.txt
@@ -754,7 +754,7 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/sass
+lcd ~/pathname/sass
 wincmd w
 exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
 exe 'vert 2resize ' . ((&columns * 60 + 136) / 272)
@@ -766,7 +766,7 @@ exe 'vert 5resize ' . ((&columns * 68 + 136) / 272)
 exe '6resize ' . ((&lines * 24 + 32) / 64)
 exe 'vert 6resize ' . ((&columns * 68 + 136) / 272)
 exe 'vert 7resize ' . ((&columns * 60 + 136) / 272)
-tabedit ~/projects/sass/spec
+tabedit ~/pathname/spec
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -812,10 +812,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/spec
+lcd ~/pathname/spec
 wincmd w
 argglobal
-edit ~/projects/sass/spec/steps/monster_steps.rb
+edit ~/pathname/spec/steps/monster_steps.rb
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -830,10 +830,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
-edit ~/projects/sass/coffee/views/pages/index.coffee
+edit ~/pathname/coffee/views/pages/index.coffee
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -848,10 +848,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
-edit ~/projects/sass/spec/features/monster.feature
+edit ~/pathname/spec/features/monster.feature
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -866,10 +866,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
-edit ~/projects/sass/spec/spec_helper.rb
+edit ~/pathname/spec/spec_helper.rb
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -884,7 +884,7 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
 edit ~/dotfiles/doc/log_test.txt
@@ -902,7 +902,7 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd ~/projects/sass/sass
+lcd ~/pathname/sass
 wincmd w
 exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
 exe 'vert 2resize ' . ((&columns * 60 + 136) / 272)
