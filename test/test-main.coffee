@@ -8,12 +8,12 @@ for file of window.__karma__.files
   tests.push file  if /Test\.js$/.test(file)
 
 require.config
-  urlArgs:
-    "bust=" + (new Date()).getTime()
+  # urlArgs:
+  #   "bust=" + (new Date()).getTime()
 
-  waitSeconds: 3600
+  # waitSeconds: 3600
 
-  baseUrl:  'base/js/'
+  baseUrl:  '/base/js/'
 
   paths:
     text:           '../vendor/text/text'
