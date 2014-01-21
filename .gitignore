@@ -4,6 +4,7 @@
 Gemfile.lock
 vendor
 node_modules
+coverage
 public/vendor/*
 public/js/*
 !public/js/empty

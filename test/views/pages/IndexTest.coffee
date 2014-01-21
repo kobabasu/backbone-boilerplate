@@ -5,7 +5,13 @@ define [
 ) ->
   describe 'views/pages/index', () ->
 
-    describe 'events', () ->
-      it 'views/pages/index should have events property', ->
-       index = new Index()
-       index.should.have.property('events')
+    el: new Object()
+
+    before ->
+      cls = new Index()
+      cls.render()
+      @el = cls.el
+      
+    describe 'expressions', () ->
+      it '先頭にpages indexと表示されていること', ->
+        expect($(@el).text()).to.eq('pages index\n')
