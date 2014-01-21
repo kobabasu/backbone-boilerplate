@@ -20,7 +20,3 @@ define [
       it '2つ目がadminであること', ->
         t = $('ul>li:nth-of-type(2) a',@el).text()
         expect(t).to.eq('admin')
-
-    describe 'transitions', () ->
-      it 'homeは"/"にジャンプすること', ->
-        

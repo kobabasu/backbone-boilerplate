@@ -24,12 +24,12 @@ require.config
     moment:         '../vendor/momentjs/moment'
     templates:      '../templates'
     cookie:         '../vendor/cookie/jquery.cookie'
-    jasmine:        '../vendor/jasmine/lib/jasmine-core/jasmine'
-    'jasmine-boot': '../vendor/jasmine/lib/jasmine-core/boot'
-    'jasmine-html': '../vendor/jasmine/lib/jasmine-core/jasmine-html'
-    mocha:          '../vendor/mocha/mocha'
-    chai:           '../vendor/chai/chai'
-    'chai-jquery':  '../vendor/chai-jquery/chai-jquery'
+    # jasmine:        '../vendor/jasmine/lib/jasmine-core/jasmine'
+    # 'jasmine-boot': '../vendor/jasmine/lib/jasmine-core/boot'
+    # 'jasmine-html': '../vendor/jasmine/lib/jasmine-core/jasmine-html'
+    # mocha:          '../vendor/mocha/mocha'
+    # chai:           '../vendor/chai/chai'
+    # 'chai-jquery':  '../vendor/chai-jquery/chai-jquery'
 
   shim:
     'underscore':
@@ -41,19 +41,19 @@ require.config
       exports: 'requestAnimationFrame'
     'cookie':
       deps: ['jquery']
-    'jasmine':
-      exports: 'jasmine'
-    'jasmine-html':
-      deps: ['jasmine']
-      exports: 'jasmine'
-    'jasmine-boot':
-      deps: ['jasmine','jasmine-html']
-      exports: 'jasmine'
-    'chai':
-      exports: 'chai'
-    'chai-jquery':
-      deps: ['jquery', 'chai']
-      exports: 'chai'
+    # 'jasmine':
+    #   exports: 'jasmine'
+    # 'jasmine-html':
+    #   deps: ['jasmine']
+    #   exports: 'jasmine'
+    # 'jasmine-boot':
+    #   deps: ['jasmine','jasmine-html']
+    #   exports: 'jasmine'
+    # 'chai':
+    #   exports: 'chai'
+    # 'chai-jquery':
+    #   deps: ['jquery', 'chai']
+    #   exports: 'chai'
 
 require [
   'routers/router'

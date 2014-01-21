@@ -15,6 +15,11 @@
     "tweenjs": null,
     "retina": "imulus/retinajs",
     "momentjs": null,
+
+    "jasmine": "pivotal/jasmine",
+    "mocha": null,
+    "chai": null,
+    "chai-jquery": null,
     
     "normalize": "necolas/normalize.css",
     "bootstrap": null,

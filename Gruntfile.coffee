@@ -22,12 +22,12 @@ module.exports = (grunt) ->
         src: ['*.coffee', '**/*.coffee']
         dest: 'public/js'
         ext: '.js'
-      jasmine:
-        expand: true
-        cwd: 'jasmine/'
-        src: ['*.coffee', '**/*.coffee']
-        dest: 'public/spec'
-        ext: '.js'
+      # jasmine:
+      #   expand: true
+      #   cwd: 'jasmine/'
+      #   src: ['*.coffee', '**/*.coffee']
+      #   dest: 'public/spec'
+      #   ext: '.js'
       mocha:
         expand: true
         cwd: 'test/'
@@ -114,7 +114,7 @@ module.exports = (grunt) ->
       options:
         dirs: [
           'coffee/**/'
-          'jasmine/**/'
+          # 'jasmine/**/'
           'test/**/'
           'sass/**/'
         ]
@@ -127,9 +127,10 @@ module.exports = (grunt) ->
           ext: '.js'
         ]
         grunt.config ['coffee','src','files'], files
-        grunt.config ['coffee','jasmine','files'], files
+        # grunt.config ['coffee','jasmine','files'], files
         grunt.config ['coffee','mocha','files'], files
-        ['coffee:src', 'coffee:jasmine', 'coffee:mocha']
+        # ['coffee:src', 'coffee:jasmine', 'coffee:mocha']
+        ['coffee:src', 'coffee:mocha']
       'sass': (filepath) ->
         files = [
           expand: true

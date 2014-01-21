@@ -4,16 +4,16 @@ define [
   'views/menu'
   'views/pages/index'
   'views/admin/index'
-  '../../spec/SpecRunner'
-  '../../test/TestRunner'
+  # '../../spec/SpecRunner'
+  # '../../test/TestRunner'
 ], (
   Backbone
   App
   Menu
   PagesIndex
   AdminIndex
-  SpecRunner
-  TestRunner
+  # SpecRunner
+  # TestRunner
 ) ->
 
   ###*
@@ -39,8 +39,8 @@ define [
       events =
         '':            'index'
         'admin/':      'admin'
-        'jasmine/':    'jasmine'
-        'mocha/':      'mocha'
+    #     'jasmine/':    'jasmine'
+    #     'mocha/':      'mocha'
 
     index: ->
       @app.loaded.index = new PagesIndex()
@@ -50,13 +50,13 @@ define [
       @app.loaded.index = new AdminIndex()
       @app.loaded.index.render()
 
-    jasmine: ->
-      $('body').empty()
-      new SpecRunner()
+    # jasmine: ->
+    #   $('body').empty()
+    #   new SpecRunner()
 
-    mocha: ->
-      $('body').empty()
-      $('body').append('<div id="mocha"></div>')
-      new TestRunner()
+    # mocha: ->
+    #   $('body').empty()
+    #   $('body').append('<div id="mocha"></div>')
+    #   new TestRunner()
 
   return Workspace
