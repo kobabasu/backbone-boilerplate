@@ -9,14 +9,19 @@ specs = [
 define [
   'chai'
   'chai-jquery'
+  'sinon'
+  'sinon-chai'
   'mocha'
 ], (
   chai
   chaiJquery
+  sinon
+  sinonChai
 ) ->
   TestRunner = ->
     should = chai.should()
     chai.use(chaiJquery)
+    chai.use(sinonChai)
 
     mocha.setup('bdd')
   

@@ -15,3 +15,14 @@ define [
     describe 'expressions', () ->
       it '先頭にpages indexと表示されていること', ->
         expect($(@el).text()).to.eq('pages index\n')
+
+    describe 'Sinon.js', () ->
+      it 'should report spy called', ->
+        cb = sinon.spy()
+
+        hello = (name, cb)  ->
+          cb("hello " + name)
+
+        hello('world', cb)
+
+        expect(cb).to.have.been.calledWith('hello world')
