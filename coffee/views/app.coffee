@@ -92,7 +92,7 @@ define [
       exception = [
         "pathto/exception"
       ]
-      href = '/' + $(e.target).attr('href')
+      href = $(e.target).attr('href')
       e.preventDefault()
       if href not in exception
         e.preventDefault()
