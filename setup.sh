@@ -8,6 +8,7 @@ cd ./public/docs/manual
 sphinx-quickstart
 grunt
 
+cd ../../../
 # change paths to current path in  session.vim
 CURRENT=$(cd $(dirname $0);pwd)
 ESCAPE=`echo $CURRENT | sed "s/\//\\\\\\\\\//g"`
