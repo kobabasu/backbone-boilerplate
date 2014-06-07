@@ -110,6 +110,11 @@ module.exports = (grunt) ->
       files: {
         'public/css/style.css': 'public/css/style.css'
       }
+
+    exec:
+      sphinx:
+        cmd: 'sphinx-build public/docs/manual/source \ 
+              public/docs/manual/build'
       
     esteWatch:
       options:

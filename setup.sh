@@ -4,6 +4,9 @@
 npm install
 bundle install --path vendor/bundle
 bower install
+cd ./public/docs/manual
+sphinx-quickstart
+cd ../../../
 grunt
 
 # change paths to current path in  session.vim
