@@ -10,8 +10,12 @@ public/js/*
 !public/js/empty
 public/css/*
 !public/css/empty
-public/docs/*
-!public/docs/empty
+public/docs/js/*
+!public/docs/js/empty
+public/docs/manual/*
+!public/docs/manual/empty
+public/docs/css/*
+!public/docs/css/empty
 public/test/*
 !public/test/empty
 public/spec/*
