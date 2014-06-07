@@ -9,6 +9,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-csso'
   grunt.loadNpmTasks 'grunt-styleguide'
+  grunt.loadNpmTasks 'grunt-exec'
   grunt.loadNpmTasks 'grunt-contrib-imagemin'
 
 
@@ -95,7 +96,7 @@ module.exports = (grunt) ->
 
     clean:
       public:
-        'public/docs'
+        'public/docs/css'
 
     imagemin:
       files: {
@@ -117,6 +118,7 @@ module.exports = (grunt) ->
           # 'jasmine/**/'
           'test/**/'
           'sass/**/'
+          'public/docs/manual/source/**'
         ]
         livereload:
           enabled: false
@@ -139,11 +141,21 @@ module.exports = (grunt) ->
         ]
         grunt.config ['compass','dev','files'], files
         ['compass:dev']
+      'sphinx': (filepath) ->
+        files = [
+          expand: true
+          src: filepath
+          ext: '.rst', '.py'
+        ]
+        grunt.config ['exec','sphinx','files'], files
+        ['exec:sphinx']
+
       
   grunt.registerTask 'default', [
     'compass:dev'
     'coffee'
     'styleguide'
+    'exec:sphinx'
   ]
 
   grunt.registerTask 'production', [
