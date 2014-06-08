@@ -3,32 +3,41 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd rootpath/coffee/views
+cd ~/pathname/coffee/views
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 rootpath/public/index.html
-badd +1 rootpath/coffee/routers/router.coffee
-badd +1 pages/index.coffee
-badd +1 rootpath/public/templates/pages/index.html
-badd +1 pages.coffee
-badd +1 rootpath/sass/base.sass
-badd +1 rootpath/sass/layout.sass
-badd +1 rootpath/sass/style.sass
-badd +1 rootpath/sass/theme.sass
-badd +1 rootpath/sass/functions.sass
-badd +1 rootpath/sass/mixins.sass
-badd +1 rootpath/sass/module.sass
-badd +1 rootpath/sass/state.sass
-badd +1 rootpath/sass/motion.sass
-badd +1 rootpath/test/views/AppTest.coffee
-badd +11 rootpath/test/views/pages/IndexTest.coffee
-badd +1 rootpath/test/views/PagesTest.coffee
-badd +1 rootpath/spec/spec_helper.rb
-badd +1 rootpath/spec/steps/monster_steps.rb
-badd +1 rootpath/spec/features/monster.feature
-badd +1 rootpath/coffee/\[quickrun\ output]
+badd +1 ~/pathname/public/index.html
+badd +1 ~/pathname/coffee/routers/router.coffee
+badd +1 ~/pathname/pages/index.coffee
+badd +1 ~/pathname/public/templates/pages/index.html
+badd +1 ~/pathname/pages.coffee
+badd +1 ~/pathname/sass/base.sass
+badd +1 ~/pathname/sass/layout.sass
+badd +1 ~/pathname/sass/style.sass
+badd +1 ~/pathname/sass/theme.sass
+badd +1 ~/pathname/sass/functions.sass
+badd +2 ~/pathname/sass/mixins.sass
+badd +1 ~/pathname/sass/module.sass
+badd +1 ~/pathname/sass/state.sass
+badd +1 ~/pathname/sass/motion.sass
+badd +1 ~/pathname/test/views/AppTest.coffee
+badd +1 ~/pathname/test/views/pages/IndexTest.coffee
+badd +1 ~/pathname/test/views/PagesTest.coffee
+badd +1 ~/pathname/spec/spec_helper.rb
+badd +1 ~/pathname/spec/steps/monster_steps.rb
+badd +1 ~/pathname/spec/features/monster.feature
+badd +1 ~/pathname/coffee/\[quickrun\ output]
+badd +16 pages.coffee
+badd +0 ~/dotfiles/vimfiles/doc/log_coffee.txt
+badd +0 ~/dotfiles/vimfiles/doc/log_sass.txt
+badd +0 pages/index.coffee
+badd +0 ~/dotfiles/vimfiles/doc/log_test.txt
+badd +1 ~/pathname/public/docs/manual/source/index.rst
+badd +1 ~/pathname/public/docs/manual/source/conf.py
+badd +0 ~/pathname/db.sql
+argglobal
 silent! argdel *
 edit pages/index.coffee
 set splitbelow splitright
@@ -62,19 +71,20 @@ wincmd t
 set winheight=1 winwidth=1
 exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
 exe 'vert 2resize ' . ((&columns * 55 + 136) / 272)
-exe '3resize ' . ((&lines * 11 + 31) / 62)
+exe '3resize ' . ((&lines * 16 + 36) / 73)
 exe 'vert 3resize ' . ((&columns * 55 + 136) / 272)
-exe '4resize ' . ((&lines * 30 + 31) / 62)
+exe '4resize ' . ((&lines * 30 + 36) / 73)
 exe 'vert 4resize ' . ((&columns * 55 + 136) / 272)
-exe '5resize ' . ((&lines * 16 + 31) / 62)
+exe '5resize ' . ((&lines * 22 + 36) / 73)
 exe 'vert 5resize ' . ((&columns * 55 + 136) / 272)
-exe '6resize ' . ((&lines * 12 + 31) / 62)
+exe '6resize ' . ((&lines * 16 + 36) / 73)
 exe 'vert 6resize ' . ((&columns * 78 + 136) / 272)
-exe '7resize ' . ((&lines * 46 + 31) / 62)
+exe '7resize ' . ((&lines * 53 + 36) / 73)
 exe 'vert 7resize ' . ((&columns * 78 + 136) / 272)
 exe 'vert 8resize ' . ((&columns * 60 + 136) / 272)
 argglobal
 enew
+file ~/pathname/coffee/views/pages/
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -83,7 +93,7 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-lcd rootpath/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
 setlocal fdm=marker
@@ -94,52 +104,65 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
+let s:l = 4 - ((3 * winheight(0) + 35) / 70)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+4
+normal! 0
+lcd ~/pathname/coffee/views
+wincmd w
+argglobal
+enew
+file ~/pathname/coffee/views/\[quickrun\ output]
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+lcd ~/pathname/coffee/views
+wincmd w
+argglobal
+edit ~/pathname/coffee/views/pages.coffee
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 16 - ((14 * winheight(0) + 15) / 30)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+16
+normal! 0
+lcd ~/pathname/coffee/views
+wincmd w
+argglobal
+edit ~/pathname/coffee/routers/router.coffee
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/coffee/views
+lcd ~/pathname/coffee/views
 wincmd w
 argglobal
-edit rootpath/coffee/\[quickrun\ output]
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 5) / 11)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/coffee/views
-wincmd w
-argglobal
-edit rootpath/coffee/views/pages.coffee
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 15) / 30)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/coffee/views
-wincmd w
-argglobal
-edit rootpath/coffee/routers/router.coffee
+edit ~/pathname/public/templates/pages/index.html
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -154,10 +177,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/coffee/views
+lcd ~/pathname/coffee/views
 wincmd w
 argglobal
-edit rootpath/public/templates/pages/index.html
+edit ~/pathname/public/index.html
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -166,31 +189,13 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 6) / 12)
+let s:l = 1 - ((0 * winheight(0) + 26) / 53)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/coffee/views
-wincmd w
-argglobal
-edit rootpath/public/index.html
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 23) / 46)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/coffee/views
+lcd ~/pathname/coffee/views
 wincmd w
 argglobal
 edit ~/dotfiles/vimfiles/doc/log_coffee.txt
@@ -202,28 +207,28 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
+let s:l = 1 - ((0 * winheight(0) + 35) / 70)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/coffee/views
+lcd ~/pathname/coffee/views
 wincmd w
 exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
 exe 'vert 2resize ' . ((&columns * 55 + 136) / 272)
-exe '3resize ' . ((&lines * 11 + 31) / 62)
+exe '3resize ' . ((&lines * 16 + 36) / 73)
 exe 'vert 3resize ' . ((&columns * 55 + 136) / 272)
-exe '4resize ' . ((&lines * 30 + 31) / 62)
+exe '4resize ' . ((&lines * 30 + 36) / 73)
 exe 'vert 4resize ' . ((&columns * 55 + 136) / 272)
-exe '5resize ' . ((&lines * 16 + 31) / 62)
+exe '5resize ' . ((&lines * 22 + 36) / 73)
 exe 'vert 5resize ' . ((&columns * 55 + 136) / 272)
-exe '6resize ' . ((&lines * 12 + 31) / 62)
+exe '6resize ' . ((&lines * 16 + 36) / 73)
 exe 'vert 6resize ' . ((&columns * 78 + 136) / 272)
-exe '7resize ' . ((&lines * 46 + 31) / 62)
+exe '7resize ' . ((&lines * 53 + 36) / 73)
 exe 'vert 7resize ' . ((&columns * 78 + 136) / 272)
 exe 'vert 8resize ' . ((&columns * 60 + 136) / 272)
-tabedit rootpath/sass
+tabedit ~/pathname/sass/motion.sass
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -274,122 +279,34 @@ set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
-exe '2resize ' . ((&lines * 15 + 31) / 62)
+exe '2resize ' . ((&lines * 18 + 36) / 73)
 exe 'vert 2resize ' . ((&columns * 45 + 136) / 272)
-exe '3resize ' . ((&lines * 14 + 31) / 62)
+exe '3resize ' . ((&lines * 16 + 36) / 73)
 exe 'vert 3resize ' . ((&columns * 45 + 136) / 272)
-exe '4resize ' . ((&lines * 13 + 31) / 62)
+exe '4resize ' . ((&lines * 17 + 36) / 73)
 exe 'vert 4resize ' . ((&columns * 45 + 136) / 272)
-exe '5resize ' . ((&lines * 14 + 31) / 62)
+exe '5resize ' . ((&lines * 16 + 36) / 73)
 exe 'vert 5resize ' . ((&columns * 45 + 136) / 272)
-exe '6resize ' . ((&lines * 15 + 31) / 62)
+exe '6resize ' . ((&lines * 18 + 36) / 73)
 exe 'vert 6resize ' . ((&columns * 45 + 136) / 272)
-exe '7resize ' . ((&lines * 24 + 31) / 62)
+exe '7resize ' . ((&lines * 29 + 36) / 73)
 exe 'vert 7resize ' . ((&columns * 45 + 136) / 272)
-exe '8resize ' . ((&lines * 18 + 31) / 62)
+exe '8resize ' . ((&lines * 21 + 36) / 73)
 exe 'vert 8resize ' . ((&columns * 45 + 136) / 272)
-exe '9resize ' . ((&lines * 15 + 31) / 62)
+exe '9resize ' . ((&lines * 18 + 36) / 73)
 exe 'vert 9resize ' . ((&columns * 45 + 136) / 272)
-exe '10resize ' . ((&lines * 24 + 31) / 62)
+exe '10resize ' . ((&lines * 29 + 36) / 73)
 exe 'vert 10resize ' . ((&columns * 45 + 136) / 272)
-exe '11resize ' . ((&lines * 18 + 31) / 62)
+exe '11resize ' . ((&lines * 21 + 36) / 73)
 exe 'vert 11resize ' . ((&columns * 45 + 136) / 272)
-exe '12resize ' . ((&lines * 14 + 31) / 62)
+exe '12resize ' . ((&lines * 18 + 36) / 73)
 exe 'vert 12resize ' . ((&columns * 52 + 136) / 272)
-exe '13resize ' . ((&lines * 44 + 31) / 62)
+exe '13resize ' . ((&lines * 51 + 36) / 73)
 exe 'vert 13resize ' . ((&columns * 52 + 136) / 272)
 exe 'vert 14resize ' . ((&columns * 60 + 136) / 272)
 argglobal
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/sass
-wincmd w
-argglobal
-edit rootpath/sass/motion.sass
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 7) / 15)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/coffee
-wincmd w
-argglobal
-edit rootpath/sass/state.sass
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 7) / 14)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/coffee
-wincmd w
-argglobal
-edit rootpath/sass/module.sass
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 6) / 13)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/coffee
-wincmd w
-argglobal
-edit rootpath/sass/layout.sass
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 7) / 14)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/coffee
-wincmd w
-argglobal
 enew
+file ~/pathname/sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -398,10 +315,9 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-lcd rootpath/coffee
+lcd ~/pathname/sass
 wincmd w
 argglobal
-edit rootpath/sass/mixins.sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -410,16 +326,70 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 12) / 24)
+let s:l = 1 - ((0 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
-normal! 0
-lcd rootpath/coffee
+normal! 012|
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit rootpath/sass/functions.sass
+edit ~/pathname/sass/state.sass
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 8) / 16)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 08|
+lcd ~/pathname/coffee
+wincmd w
+argglobal
+edit ~/pathname/sass/module.sass
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 8) / 17)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 09|
+lcd ~/pathname/coffee
+wincmd w
+argglobal
+edit ~/pathname/sass/layout.sass
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 8) / 16)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 09|
+lcd ~/pathname/coffee
+wincmd w
+argglobal
+edit ~/pathname/coffee/\[quickrun\ output]
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -434,10 +404,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit rootpath/sass/theme.sass
+edit ~/pathname/sass/mixins.sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -446,16 +416,16 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 7) / 15)
+let s:l = 4 - ((3 * winheight(0) + 14) / 29)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+4
 normal! 0
-lcd rootpath/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit rootpath/sass/style.sass
+edit ~/pathname/sass/functions.sass
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -464,16 +434,70 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 12) / 24)
+let s:l = 1 - ((0 * winheight(0) + 10) / 21)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 012|
+lcd ~/pathname/coffee
+wincmd w
+argglobal
+edit ~/pathname/sass/theme.sass
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 9) / 18)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 08|
+lcd ~/pathname/coffee
+wincmd w
+argglobal
+edit ~/pathname/sass/style.sass
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 14) / 29)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 08|
+lcd ~/pathname/coffee
+wincmd w
+argglobal
+edit ~/pathname/sass/base.sass
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 10) / 21)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit rootpath/sass/base.sass
+edit ~/pathname/public/templates/pages/index.html
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -488,10 +512,10 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
-edit rootpath/public/templates/pages/index.html
+edit ~/pathname/public/index.html
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -500,31 +524,13 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 7) / 14)
+let s:l = 1 - ((0 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/coffee
-wincmd w
-argglobal
-edit rootpath/public/index.html
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 22) / 44)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/coffee
+lcd ~/pathname/coffee
 wincmd w
 argglobal
 edit ~/dotfiles/vimfiles/doc/log_sass.txt
@@ -536,206 +542,41 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
+let s:l = 1 - ((0 * winheight(0) + 35) / 70)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/coffee
+lcd ~/pathname/coffee
 wincmd w
 exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
-exe '2resize ' . ((&lines * 15 + 31) / 62)
+exe '2resize ' . ((&lines * 18 + 36) / 73)
 exe 'vert 2resize ' . ((&columns * 45 + 136) / 272)
-exe '3resize ' . ((&lines * 14 + 31) / 62)
+exe '3resize ' . ((&lines * 16 + 36) / 73)
 exe 'vert 3resize ' . ((&columns * 45 + 136) / 272)
-exe '4resize ' . ((&lines * 13 + 31) / 62)
+exe '4resize ' . ((&lines * 17 + 36) / 73)
 exe 'vert 4resize ' . ((&columns * 45 + 136) / 272)
-exe '5resize ' . ((&lines * 14 + 31) / 62)
+exe '5resize ' . ((&lines * 16 + 36) / 73)
 exe 'vert 5resize ' . ((&columns * 45 + 136) / 272)
-exe '6resize ' . ((&lines * 15 + 31) / 62)
+exe '6resize ' . ((&lines * 18 + 36) / 73)
 exe 'vert 6resize ' . ((&columns * 45 + 136) / 272)
-exe '7resize ' . ((&lines * 24 + 31) / 62)
+exe '7resize ' . ((&lines * 29 + 36) / 73)
 exe 'vert 7resize ' . ((&columns * 45 + 136) / 272)
-exe '8resize ' . ((&lines * 18 + 31) / 62)
+exe '8resize ' . ((&lines * 21 + 36) / 73)
 exe 'vert 8resize ' . ((&columns * 45 + 136) / 272)
-exe '9resize ' . ((&lines * 15 + 31) / 62)
+exe '9resize ' . ((&lines * 18 + 36) / 73)
 exe 'vert 9resize ' . ((&columns * 45 + 136) / 272)
-exe '10resize ' . ((&lines * 24 + 31) / 62)
+exe '10resize ' . ((&lines * 29 + 36) / 73)
 exe 'vert 10resize ' . ((&columns * 45 + 136) / 272)
-exe '11resize ' . ((&lines * 18 + 31) / 62)
+exe '11resize ' . ((&lines * 21 + 36) / 73)
 exe 'vert 11resize ' . ((&columns * 45 + 136) / 272)
-exe '12resize ' . ((&lines * 14 + 31) / 62)
+exe '12resize ' . ((&lines * 18 + 36) / 73)
 exe 'vert 12resize ' . ((&columns * 52 + 136) / 272)
-exe '13resize ' . ((&lines * 44 + 31) / 62)
+exe '13resize ' . ((&lines * 51 + 36) / 73)
 exe 'vert 13resize ' . ((&columns * 52 + 136) / 272)
 exe 'vert 14resize ' . ((&columns * 60 + 136) / 272)
-tabedit rootpath/test/views
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-wincmd _ | wincmd |
-vsplit
-wincmd _ | wincmd |
-vsplit
-wincmd _ | wincmd |
-vsplit
-4wincmd h
-wincmd w
-wincmd w
-wincmd w
-wincmd _ | wincmd |
-split
-wincmd _ | wincmd |
-split
-2wincmd k
-wincmd w
-wincmd w
-wincmd w
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
-exe 'vert 2resize ' . ((&columns * 60 + 136) / 272)
-exe 'vert 3resize ' . ((&columns * 55 + 136) / 272)
-exe '4resize ' . ((&lines * 12 + 31) / 62)
-exe 'vert 4resize ' . ((&columns * 73 + 136) / 272)
-exe '5resize ' . ((&lines * 22 + 31) / 62)
-exe 'vert 5resize ' . ((&columns * 73 + 136) / 272)
-exe '6resize ' . ((&lines * 23 + 31) / 62)
-exe 'vert 6resize ' . ((&columns * 73 + 136) / 272)
-exe 'vert 7resize ' . ((&columns * 60 + 136) / 272)
-argglobal
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/test/views
-wincmd w
-argglobal
-edit rootpath/test/views/pages/IndexTest.coffee
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/sass
-wincmd w
-argglobal
-edit rootpath/coffee/views/pages/index.coffee
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 3 - ((2 * winheight(0) + 29) / 59)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-3
-normal! 0
-lcd rootpath/sass
-wincmd w
-argglobal
-enew
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-lcd rootpath/sass
-wincmd w
-argglobal
-edit rootpath/test/views/PagesTest.coffee
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 11) / 22)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/sass
-wincmd w
-argglobal
-edit rootpath/test/views/AppTest.coffee
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 11) / 23)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/sass
-wincmd w
-argglobal
-edit ~/dotfiles/vimfiles/doc/log_test.txt
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-let s:l = 3 - ((2 * winheight(0) + 29) / 59)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-3
-normal! 0
-lcd rootpath/sass
-wincmd w
-exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
-exe 'vert 2resize ' . ((&columns * 60 + 136) / 272)
-exe 'vert 3resize ' . ((&columns * 55 + 136) / 272)
-exe '4resize ' . ((&lines * 12 + 31) / 62)
-exe 'vert 4resize ' . ((&columns * 73 + 136) / 272)
-exe '5resize ' . ((&lines * 22 + 31) / 62)
-exe 'vert 5resize ' . ((&columns * 73 + 136) / 272)
-exe '6resize ' . ((&lines * 23 + 31) / 62)
-exe 'vert 6resize ' . ((&columns * 73 + 136) / 272)
-exe 'vert 7resize ' . ((&columns * 60 + 136) / 272)
-tabedit rootpath/spec
+tabedit ~/pathname/test/views/pages/IndexTest.coffee
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -761,12 +602,14 @@ set winheight=1 winwidth=1
 exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
 exe 'vert 2resize ' . ((&columns * 60 + 136) / 272)
 exe 'vert 3resize ' . ((&columns * 55 + 136) / 272)
-exe '4resize ' . ((&lines * 14 + 31) / 62)
+exe '4resize ' . ((&lines * 42 + 36) / 73)
 exe 'vert 4resize ' . ((&columns * 73 + 136) / 272)
-exe '5resize ' . ((&lines * 44 + 31) / 62)
+exe '5resize ' . ((&lines * 27 + 36) / 73)
 exe 'vert 5resize ' . ((&columns * 73 + 136) / 272)
 exe 'vert 6resize ' . ((&columns * 60 + 136) / 272)
 argglobal
+enew
+file ~/pathname/test/views
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -775,16 +618,9 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd rootpath/spec
+lcd ~/pathname/test/views
 wincmd w
 argglobal
-edit rootpath/spec/steps/monster_steps.rb
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -793,16 +629,16 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
+let s:l = 1 - ((0 * winheight(0) + 35) / 70)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
-edit rootpath/coffee/views/pages/index.coffee
+edit ~/pathname/coffee/views/pages/index.coffee
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -811,16 +647,16 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
+let s:l = 3 - ((2 * winheight(0) + 35) / 70)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+3
 normal! 0
-lcd rootpath/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
-edit rootpath/spec/features/monster.feature
+edit ~/pathname/test/views/PagesTest.coffee
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -829,16 +665,16 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 7) / 14)
+let s:l = 1 - ((0 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
-edit rootpath/spec/spec_helper.rb
+edit ~/pathname/test/views/AppTest.coffee
 setlocal fdm=marker
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -847,13 +683,13 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 22) / 44)
+let s:l = 1 - ((0 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/sass
+lcd ~/pathname/sass
 wincmd w
 argglobal
 edit ~/dotfiles/vimfiles/doc/log_test.txt
@@ -865,22 +701,325 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
+let s:l = 3 - ((2 * winheight(0) + 35) / 70)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+3
+normal! 0
+lcd ~/pathname/sass
+wincmd w
+exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
+exe 'vert 2resize ' . ((&columns * 60 + 136) / 272)
+exe 'vert 3resize ' . ((&columns * 55 + 136) / 272)
+exe '4resize ' . ((&lines * 42 + 36) / 73)
+exe 'vert 4resize ' . ((&columns * 73 + 136) / 272)
+exe '5resize ' . ((&lines * 27 + 36) / 73)
+exe 'vert 5resize ' . ((&columns * 73 + 136) / 272)
+exe 'vert 6resize ' . ((&columns * 60 + 136) / 272)
+tabedit ~/pathname/spec/steps/monster_steps.rb
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+4wincmd h
+wincmd w
+wincmd w
+wincmd w
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
+exe 'vert 2resize ' . ((&columns * 60 + 136) / 272)
+exe 'vert 3resize ' . ((&columns * 55 + 136) / 272)
+exe '4resize ' . ((&lines * 17 + 36) / 73)
+exe 'vert 4resize ' . ((&columns * 73 + 136) / 272)
+exe '5resize ' . ((&lines * 52 + 36) / 73)
+exe 'vert 5resize ' . ((&columns * 73 + 136) / 272)
+exe 'vert 6resize ' . ((&columns * 60 + 136) / 272)
+argglobal
+enew
+file ~/pathname/spec
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+lcd ~/pathname/spec
+wincmd w
+argglobal
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 35) / 70)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-lcd rootpath/sass
+lcd ~/pathname/sass
+wincmd w
+argglobal
+edit ~/pathname/coffee/views/pages/index.coffee
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 35) / 70)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/pathname/sass
+wincmd w
+argglobal
+edit ~/pathname/spec/features/monster.feature
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 8) / 17)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/pathname/sass
+wincmd w
+argglobal
+edit ~/pathname/spec/spec_helper.rb
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 26) / 52)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/pathname/sass
+wincmd w
+argglobal
+edit ~/dotfiles/vimfiles/doc/log_test.txt
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 1 - ((0 * winheight(0) + 35) / 70)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/pathname/sass
 wincmd w
 exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
 exe 'vert 2resize ' . ((&columns * 60 + 136) / 272)
 exe 'vert 3resize ' . ((&columns * 55 + 136) / 272)
-exe '4resize ' . ((&lines * 14 + 31) / 62)
+exe '4resize ' . ((&lines * 17 + 36) / 73)
 exe 'vert 4resize ' . ((&columns * 73 + 136) / 272)
-exe '5resize ' . ((&lines * 44 + 31) / 62)
+exe '5resize ' . ((&lines * 52 + 36) / 73)
 exe 'vert 5resize ' . ((&columns * 73 + 136) / 272)
 exe 'vert 6resize ' . ((&columns * 60 + 136) / 272)
+tabedit ~/pathname/public/docs/manual/source/index.rst
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+4wincmd h
+wincmd w
+wincmd w
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
+exe 'vert 2resize ' . ((&columns * 60 + 136) / 272)
+exe 'vert 3resize ' . ((&columns * 60 + 136) / 272)
+exe 'vert 4resize ' . ((&columns * 68 + 136) / 272)
+exe 'vert 5resize ' . ((&columns * 60 + 136) / 272)
+argglobal
+enew
+file ~/pathname/public/docs/manual/source
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+lcd ~/pathname/spec
+wincmd w
+argglobal
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 35) / 70)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/pathname/spec
+wincmd w
+argglobal
+edit ~/pathname/public/docs/manual/source/conf.py
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 35) / 70)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/pathname/spec
+wincmd w
+argglobal
+edit ~/pathname/public/docs/manual/source/index.rst
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 35) / 70)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/pathname/spec
+wincmd w
+argglobal
+edit ~/dotfiles/vimfiles/doc/log_sphinx.txt
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 1 - ((0 * winheight(0) + 35) / 70)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/pathname/spec
+wincmd w
+exe 'vert 1resize ' . ((&columns * 20 + 136) / 272)
+exe 'vert 2resize ' . ((&columns * 60 + 136) / 272)
+exe 'vert 3resize ' . ((&columns * 60 + 136) / 272)
+exe 'vert 4resize ' . ((&columns * 68 + 136) / 272)
+exe 'vert 5resize ' . ((&columns * 60 + 136) / 272)
+tabedit ~/pathname/db.sql
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 211 + 136) / 272)
+exe 'vert 2resize ' . ((&columns * 60 + 136) / 272)
+argglobal
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 35) / 70)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/pathname/spec
+wincmd w
+argglobal
+edit ~/dotfiles/vimfiles/doc/log_db.txt
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 1 - ((0 * winheight(0) + 35) / 70)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/pathname/spec
+wincmd w
+exe 'vert 1resize ' . ((&columns * 211 + 136) / 272)
+exe 'vert 2resize ' . ((&columns * 60 + 136) / 272)
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
